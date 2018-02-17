@@ -1,0 +1,40 @@
+﻿@model Service[];
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="service list">
+    <h2>Available Services</h2>
+    <div class="search">
+        <input id="search-box" type="text" />
+        <button type="submit">searh</button>
+    </div>
+    <ul class="list-group">
+@foreach (var service in Model)
+{
+        <li class="btn-default list-group-item row case">
+            <div class="doctor text-center col-md-2">
+                <img src="..." class="img-thumbnail" />
+                <div>
+                    <a href="#" class="name">@service.Provider</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h4>@service.Summary</h4>
+                <div class="description">
+                    <h5>@service.Details</h5>
+                </div>
+            </div>
+            @Html.ActionLink("Get", "Get", new { service.Id }, new { @class = "details" })
+        </li>
+}
+    </ul>
+    @*<nav class="text-center">
+        <ul class="pagination">
+@for (var i = 1; i <= 4; i++)
+{
+            <li class="page-item@(i == 1 ? " active" : "")"><a href="#" class="page-link">@i</a></li>
+}
+        </ul>
+    </nav>*@
+</div>

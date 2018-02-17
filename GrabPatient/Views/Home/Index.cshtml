@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@using (Html.BeginForm("Index", "Service", FormMethod.Post))
+{
+    <div class="home text-center">
+        <h2>Book dental service online</h2>
+        <div class="search">
+            <input type="text" name="keywords" placeholder="Enter keywords" />
+            <button>Search</button>
+        </div>
+    </div>
+}
