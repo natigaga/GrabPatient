@@ -16,8 +16,9 @@ namespace GrabPatient.Models
     public class PatientInfo
     {
         public Guid Id { get; set; }
+
         public string Name { get; set; }
         public string MobileNo { get; set; }
-        public string Syndom { get; set; }
+        public string Symtoms { get; set; }
     }
 }

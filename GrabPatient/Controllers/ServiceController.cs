@@ -11,6 +11,7 @@ namespace GrabPatient.Controllers
     {
         public IActionResult Index(string keywords) => View(services.Values.ToArray());
         public IActionResult Get(Guid id) => View(services[id]);
+        public IActionResult PatientInfo(string id) => View("PatientInfo", id);
 
         static IDictionary<Guid, Service> services = Enumerable.Range(0, 5).Select(x => new Service
         {

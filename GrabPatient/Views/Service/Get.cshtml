@@ -4,56 +4,55 @@
     ViewData["Title"] = "Service";
 }
 
-<h2>Service</h2>
+@using (Html.BeginForm("PatientInfo", "Service", FormMethod.Post))
+{
+    <h2>Service</h2>
 
-<div>
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Provider)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Provider)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Summary)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Summary)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Details)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Details)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.AvaibleTime)
-        </dt>
-        <dd>
-            <select>
-                <option value="8:00-10:00">
-                    8:00-10:00
-                </option>
-                <option value="10:00-12:00">
-                    10:00-12:00
-                </option>
-                <option value="13:00-15:00">13:00-15:00</option>
-                <option value="15:00-17:00">15:00-17:00</option>
-            </select>
-        </dd>
+    @Html.HiddenFor(model => model.Id)
+    <div>
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Provider)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Provider)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Summary)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Summary)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Details)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Details)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.AvaibleTime)
+            </dt>
+            <dd>
+                <select>
+                    <option value="8:00-10:00">
+                        8:00-10:00
+                    </option>
+                    <option value="10:00-12:00">
+                        10:00-12:00
+                    </option>
+                    <option value="13:00-15:00">13:00-15:00</option>
+                    <option value="15:00-17:00">15:00-17:00</option>
+                </select>
+            </dd>
 
 
 
-    </dl>
-</div>
-<br />
-<div>
-    <dt></dt>
-    <dd>
-        <button type="button" align="middle">Make Appointment</button>
-    </dd>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+        </dl>
+    </div>
+    <br/>
+        <button>Make Appointment</button> 
+    <br/> 
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+}
