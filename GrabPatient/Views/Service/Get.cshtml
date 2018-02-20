@@ -26,8 +26,34 @@
         <dd>
             @Html.DisplayFor(model => model.Details)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AvaibleTime)
+        </dt>
+        <dd>
+            <select>
+                <option value="8:00-10:00">
+                    8:00-10:00
+                </option>
+                <option value="10:00-12:00">
+                    10:00-12:00
+                </option>
+                <option value="13:00-15:00">13:00-15:00</option>
+                <option value="15:00-17:00">15:00-17:00</option>
+            </select>
+        </dd>
+
+
+
     </dl>
 </div>
+<br />
+<div>
+    <dt></dt>
+    <dd>
+        <button type="button" align="middle">Make Appointment</button>
+    </dd>
+</div>
+
 <div>
     <a asp-action="Index">Back to List</a>
 </div>

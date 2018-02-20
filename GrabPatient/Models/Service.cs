@@ -11,5 +11,13 @@ namespace GrabPatient.Models
         public string Provider { get; set; }
         public string Summary { get; set; }
         public string Details { get; set; }
+        public string AvaibleTime { get; set; }
+    }
+    public class PatientInfo
+    {
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+        public string MobileNo { get; set; }
+        public string Syndom { get; set; }
     }
 }
