@@ -4,11 +4,51 @@
 
 @using (Html.BeginForm("Index", "Service", FormMethod.Post))
 {
-    <div class="home text-center">
-        <h2>Book dental service online</h2>
-        <div class="search">
-            <input type="text" name="keywords" placeholder="Enter keywords" />
-            <button>Search</button>
-        </div>
+<div class="home text-center">
+    <h2>Book dental service online</h2>
+    <h3>บอกฉันหน่อยคุณเป็นอะไรมา หรือต้องการปรึกษาคุณหมอด้านไหน</h3>
+    <div>
+        <table align="center">
+            <tr>
+                <td><button style="width:100px">ถอนฟัน</button></td>
+
+                <td><button style="width:100px">อุดฟัน</button></td>
+                <td><button style="width:100px">รักษารากฟัน</button></td>
+                <td><button style="width:100px">ปวดฟัน</button></td>
+            </tr>
+            <tr>
+                <td><button style="width:100px">ปวดเหงือก</button></td>
+                <td><button style="width:100px">ทำฟันเทียม</button></td>
+                <td><button style="width:100px">ผ่าฟันคุด</button></td>
+                <td><button style="width:100px">ครอบฟัน</button></td>
+            </tr>
+        </table>
+        <br />
     </div>
+    <h3>คุณอยากพบหมอวันไหน</h3>
+    <div>
+        <table align="center" border="1">
+            <tr>
+                <th  align="center" colspan="4" >February</th>
+                <th align="center" colspan="3" >March</th>        
+            </tr>
+            <tr>
+                <td style="width:50px">25</td>
+                <td style="width:50px">26</td>
+                <td style="width:50px">27</td>
+                <td style="width:50px">28</td>
+                <td style="width:50px">01</td>
+                <td style="width:50px">02</td>
+                <td style="width:50px">03</td>
+            </tr>
+        </table>
+        <br />
+
+    </div>
+
+    <div class="search">
+        <input type="text" name="keywords" placeholder="Enter keywords" />
+        <button>Search</button>
+    </div>
+</div>
 }

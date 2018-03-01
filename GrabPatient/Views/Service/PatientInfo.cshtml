@@ -7,16 +7,42 @@
 <h2>Make Appointment</h2>
 <h3>Please input your name and info for your appointment</h3>
 
-<div>
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor("First/Last Name")
-        </dt>
-        <dd>
-       
-        </dd>
-    </dl>
-</div>
+<form>
+    <div>
+        <dl class="dl-horizontal">
+            <dt>
+                First name:
+            </dt>
+            <dd>
+                <input type="submit" name="fname" value="นัทธิกา                               "><br>
+            </dd>
+            <dt>
+                Last name:
+            </dt>
+            <dd>
+                <input type="submit" name="lname" value="สกุลเอี่ยม                              "><br>
+            </dd>
+            <dt>
+                Mobile Number:
+            </dt>
+            <dd>
+                <input type="submit" name="Mobile" value="0814420332                        "><br>
+            </dd>
+            <dt>
+                โปรดระบุ อาการ:
+            </dt>
+            <dd>
+                <input type="submit" name="symdom" value="ปวดฟัน                                 "><br>
+            </dd>
+
+            <dd>
+                <input type="submit" value="Confirm">
+            </dd>
+        </dl>
+    </div>
+</form>
+
+
 <div>
     <a asp-action="Index">Back to List</a>
 </div>

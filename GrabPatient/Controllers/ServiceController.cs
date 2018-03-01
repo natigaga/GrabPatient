@@ -16,9 +16,9 @@ namespace GrabPatient.Controllers
         static IDictionary<Guid, Service> services = Enumerable.Range(0, 5).Select(x => new Service
         {
             Id = Guid.NewGuid(),
-            Details = "Details",
-            Provider = "Mr. Dentist",
-            Summary = "อุดฟัน; ถอนฟัน" ,
+            Details = "มหาลัยธรรมศาสตร์",
+            Provider = "คุณหมอ กนกภรณ์",
+            Summary = "ปี 5" ,
          })
         .ToDictionary(x => x.Id);
     }
